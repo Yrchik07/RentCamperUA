@@ -1,13 +1,20 @@
-// import { useState } from 'react'
+import { Navigate, Route, Routes } from 'react-router-dom';
+import CatalogPage from './pages/Catalog/CatalogPage.jsx';
+
 import './App.css'
+import HomePage from './pages/Home/HomePage.jsx';
+import FavoritesPage from './pages/Favorites/FavoritesPage.jsx';
 
 function App() {
 
   return (
-    <>
-      <h1>Hello Werd</h1>
-    </>
-  )
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/catalog" element={<CatalogPage />} />
+        <Route path="/favorites" element={<FavoritesPage />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+  );
 }
 
 export default App

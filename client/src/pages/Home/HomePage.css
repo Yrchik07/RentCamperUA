@@ -1,0 +1,43 @@
+.home-page {
+  padding: 20px;
+  text-align: center;
+}
+
+.home-header {
+  margin-bottom: 30px;
+}
+
+.services {
+  display: flex;
+  justify-content: space-between; /* Равномерное распределение карточек */
+  gap: 20px; /* Промежуток между карточками */
+}
+
+.service {
+  flex: 1 1 calc(33.333% - 20px); /* Ширина карточек с учетом промежутка */
+  display: flex;
+  flex-direction: column; /* Вертикальное выравнивание контента */
+  justify-content: space-between; /* Равномерное распределение контента */
+  min-height: 200px; /* Минимальная высота карточки */
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавляет тень для объемного эффекта */
+  text-align: left; /* Выравнивание текста внутри карточки */
+  text-decoration: none; /* Убирает подчеркивание текста */
+}
+
+.service a {
+  text-decoration: none;
+  color: inherit; /* Наследует цвет текста родительского элемента */
+}
+
+.service h2 {
+  margin-top: 0;
+}
+
+.service p {
+  margin-bottom: 0;
+}
