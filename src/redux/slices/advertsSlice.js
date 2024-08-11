@@ -17,7 +17,6 @@ const initialState = {
 
 export const fetchAdverts = createAsyncThunk('adverts/fetchAdverts', async (params) => {
   const response = await axiosInstance.get('adverts', { params });
-  console.log('Fetched adverts:', response.data);
   return response.data;
 });
 
@@ -26,7 +25,6 @@ const advertsSlice = createSlice({
   initialState,
   reducers: {
     toggleFavorite: (state, action) => {
-      console.log("Fetched adverts:", action.payload);
       const advertId = action.payload;
       const isFavorite = state.favorites.includes(advertId);
 
@@ -35,7 +33,6 @@ const advertsSlice = createSlice({
       } else {
         state.favorites.push(advertId);
       }
-      console.log('Updated favorites:', state.favorites);
       localStorage.setItem('favorites', JSON.stringify(state.favorites));
     },
     setFilters: (state, action) => {

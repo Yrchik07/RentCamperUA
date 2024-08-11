@@ -9,13 +9,10 @@ const FavoritesPage = () => {
   const favorites = useSelector((state) => state.adverts.favorites);
 
   useEffect(() => {
-    // Запрашиваем объявления с сервера при загрузке страницы
     dispatch(fetchAdverts());
   }, [dispatch]);
 
   useEffect(() => {
-    console.log('Adverts:', adverts);
-    console.log('Favorites:', favorites);
   }, [adverts, favorites]);
 
   if (!adverts.length) {

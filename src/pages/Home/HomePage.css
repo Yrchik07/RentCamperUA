@@ -1,0 +1,42 @@
+.home-page {
+  padding: 20px;
+  text-align: center;
+}
+
+.home-header {
+  margin-bottom: 30px;
+}
+
+.services {
+  display: flex;
+  justify-content: space-between; 
+  gap: 20px; 
+}
+
+.service {
+  flex: 1 1 calc(33.333% - 20px); 
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between; 
+  min-height: 200px;
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left; 
+  text-decoration: none; 
+}
+
+.service a {
+  text-decoration: none;
+  color: inherit; 
+}
+.service h2 {
+  margin-top: 0;
+}
+
+.service p {
+  margin-bottom: 0;
+}

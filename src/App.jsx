@@ -4,7 +4,9 @@ import CatalogPage from './pages/Catalog/CatalogPage.jsx';
 import './App.css'
 import HomePage from './pages/Home/HomePage.jsx';
 import FavoritesPage from './pages/Favorites/FavoritesPage.jsx';
+import Modal from 'react-modal';
 
+Modal.setAppElement("#root");
 function App() {
 
   return (
